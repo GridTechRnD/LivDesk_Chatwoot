@@ -29,6 +29,7 @@ master.key
 
 # Ignore env files
 .env
+.env.hexing
 
 public/uploads
 public/packs*
@@ -94,3 +95,6 @@ yarn-debug.log*
 .vscode
 .claude/settings.local.json
 .cursor
+
+# Ignore pnpm store
+.pnpm-store/v10/*
