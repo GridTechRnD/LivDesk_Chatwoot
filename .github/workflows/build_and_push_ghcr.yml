@@ -21,14 +21,13 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build base image (chatwoot:development)
+      - name: Build and push base image (chatwoot-development)
         uses: docker/build-push-action@v5
         with:
           context: .
           file: ./docker/Dockerfile
-          push: false
-          load: true
-          tags: chatwoot:development
+          push: true
+          tags: ghcr.io/gridtechrnd/chatwoot-development:latest
 
       - name: Build and push rails image
         uses: docker/build-push-action@v5
