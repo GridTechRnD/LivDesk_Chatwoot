@@ -27,6 +27,7 @@ jobs:
           context: .
           file: ./docker/Dockerfile
           push: false
+          load: true
           tags: chatwoot:development
 
       - name: Build and push rails image
